@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/default_containter_bgcolor"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="?attr/default_containter_bgcolor"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/replylist_author_avatarsize"
+            android:layout_height="@dimen/replylist_author_avatarsize"
+            android:layout_margin="@dimen/defalt_view_margin_size"
+            android:id="@+id/imageview_authoravatar_cell_kexuerenarticlereply"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/default_summery_textcolor"
+            android:background="?attr/default_containter_bgcolor"
+            android:id="@+id/textview_authornickname_cell_kexuerenarticlereply"
+            android:layout_toRightOf="@+id/imageview_authoravatar_cell_kexuerenarticlereply"
+            android:layout_margin="@dimen/defalt_view_margin_size"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="?attr/default_summery_textcolor"
+            android:background="?attr/default_containter_bgcolor"
+            android:id="@+id/textview_pubtime_cell_kexuerenarticlereply"
+            android:layout_toRightOf="@+id/textview_authornickname_cell_kexuerenarticlereply"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/defalt_view_margin_size"
+            android:textColor="?attr/default_summery_textcolor"
+            android:background="?attr/default_containter_bgcolor"
+            android:id="@+id/textview_floor_cell_kexuerenarticlereply"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <com.xguokr.view.TTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/defalt_view_margin_size"
+        android:background="?attr/default_containter_bgcolor"
+        android:textColor="?attr/default_summery_textcolor"
+        android:id="@+id/textview_content_cell_grouparticlereply"
+        />
+
+    <View
+        android:background="?attr/divide_line_color"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/defalt_listview_divider_margin_size"
+        android:layout_height="1px"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xguokr.activity.MainActivityNavigation"
+    android:orientation="vertical"
+    android:background="?attr/default_containter_bgcolor"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/toolbar_mainactivity"
+        android:theme="?attr/toolbarTheme"
+        android:background="?attr/toolbar_bg"
+        />
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        >
+
+        <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/default_containter_bgcolor"
+            />
+
+        <fragment android:id="@+id/navigation_drawer"
+            android:layout_width="@dimen/navigation_drawer_width" android:layout_height="match_parent"
+            android:background="?attr/default_containter_bgcolor"
+            android:layout_gravity="start" android:name="com.xguokr.activity.NavigationDrawerFragment"
+            tools:layout="@layout/fragment_navigation_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
+
+
+

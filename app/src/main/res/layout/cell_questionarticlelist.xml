@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/default_containter_bgcolor"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_title_cell_questionarticlelist"
+        android:textSize="@dimen/questionarticlelist_title_textsize"
+        android:background="?attr/default_containter_bgcolor"
+        android:textColor="?attr/default_obvious_textcolor"
+        android:layout_margin="@dimen/defalt_view_margin_size"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/defalt_view_margin_size"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textview_author_cell_questionarticlelist"
+            android:textSize="@dimen/questionarticlelist_author_nickname_textsize"
+            android:layout_alignParentLeft="true"
+            android:background="?attr/default_containter_bgcolor"
+            android:textColor="?attr/default_summery_textcolor"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textview_pubtime_cell_questionarticlelist"
+            android:background="?attr/default_containter_bgcolor"
+            android:textColor="?attr/default_summery_textcolor"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/textview_author_cell_questionarticlelist"
+            android:textSize="@dimen/questionarticlelist_pubtime_textsize"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="?attr/divide_line_color"
+        android:layout_margin="@dimen/defalt_listview_divider_margin_size"
+        />
+
+</LinearLayout>

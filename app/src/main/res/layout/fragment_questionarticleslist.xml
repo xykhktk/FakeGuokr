@@ -1,0 +1,16 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="?attr/default_containter_bgcolor"
+    android:id="@+id/SwipeRefreshLayout_questionarticlelist"
+    tools:context="com.xguokr.fragment.GroupArticlesListFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview_questionarticlelist"
+        />
+
+</android.support.v4.widget.SwipeRefreshLayout>

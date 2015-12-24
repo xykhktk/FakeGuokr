@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Lib_floatingactionbutton/Lib_floatingactionbutton.iml" filepath="$PROJECT_DIR$/Lib_floatingactionbutton/Lib_floatingactionbutton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XGuokr.iml" filepath="$PROJECT_DIR$/XGuokr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>

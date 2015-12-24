@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:background="?attr/default_containter_bgcolor"
+    android:layout_margin="0dp"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_GroupArticlesReplyActivity"
+        android:theme="?attr/toolbarTheme"
+        android:background="?attr/toolbar_bg"
+       />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/recyclerView_grouparticlereply"
+        android:layout_margin="0dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:background="?attr/default_containter_bgcolor"
+        >
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColorHint="@color/half_black"
+            android:background="?attr/default_containter_bgcolor"
+            android:id="@+id/edittext_grouparticlereply"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/default_containter_bgcolor"
+            android:src="@drawable/ic_comment_grey600_48dp"
+            android:id="@+id/imageview_grouparticlereply"/>
+
+    </LinearLayout>
+
+</LinearLayout>

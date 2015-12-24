@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.xguokr.fragment.GroupArticleFragment"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/default_containter_bgcolor"
+    android:clickable="true">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/default_containter_bgcolor"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+<!--        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/defalt_view_margin_size"
+            android:id="@+id/webview_grouparticle"/>-->
+        <com.xguokr.view.TTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/defalt_view_margin_size"
+            android:textColor="?attr/default_obvious_textcolor"
+            android:id="@+id/ttextview_grouparticle"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/floatingmenu_grouparticlelist_activity"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            fab:fab_addButtonColorNormal="@color/float_menu_bg_normal"
+            fab:fab_addButtonColorPressed="@color/float_menu_bg_press"
+            >
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/float_menu_bg_normal"
+                fab:fab_colorPressed="@color/float_menu_bg_press"
+                fab:fab_icon="@drawable/ic_reply_white_48dp"
+                android:id="@+id/floatingactionbutton_reply_grouparticle"
+                />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_icon="@drawable/ic_thumb_up_white_48dp"
+                fab:fab_colorNormal="@color/float_menu_bg_normal"
+                fab:fab_colorPressed="@color/float_menu_bg_press"
+                android:id="@+id/floatingactionbutton_thumbup_grouparticle"
+                />
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

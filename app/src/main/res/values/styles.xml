@@ -1,0 +1,91 @@
+<resources>
+
+<!--    &lt;!&ndash; Base application theme. &ndash;&gt;
+    <style name="AppThemebak" parent="android:Theme.Holo.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+    </style>
+
+    &lt;!&ndash; Base application theme. &ndash;&gt;
+    <style name="AppTheme" parent="AppThemeDay">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+    </style>-->
+
+    <style name="AppTheme.Default" parent="AppThemeDay">
+        <!-- Customize your theme here. -->
+       <!-- <item name="android:textColorPrimary">@android:color/white</item>-->
+    </style>
+
+    <style name="AppThemeDay" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="toolbarTheme">@style/ToolbarStyleDay</item>
+        <item name="default_containter_bgcolor">@color/white</item>
+        <item name="default_obvious_textcolor">@color/black</item>
+        <item name="default_summery_textcolor">@color/black_90</item>
+        <item name="divide_line_color">@color/black_90</item>
+        <item name="cardview_bgcolor">@color/white</item>
+        <item name="toolbar_bg">@color/toolbar_bg</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- <item name="android:textColorPrimary">@android:color/white</item>-->
+    </style>
+
+    <style name="AppThemeNight" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="toolbarTheme">@style/ToolbarStyleDay</item>
+        <item name="default_containter_bgcolor">@color/grey_900</item>
+        <item name="default_obvious_textcolor">@color/grey_500</item>
+        <item name="default_summery_textcolor">@color/grey_600</item>
+        <item name="divide_line_color">@color/grey_600</item>
+        <item name="cardview_bgcolor">@color/grey_800</item>
+        <item name="toolbar_bg">@color/grey_800</item>
+    </style>
+
+
+    <style name="ToolbarStyleDay" parent="@style/Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/toolbar_bg</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="titleTextAppearance">@style/ToolbarTextAppearance</item>
+        <item name="actionMenuTextAppearance">@style/actionMenuTextAppearance</item>
+        <item name="actionModeBackground">@color/toolbar_menu_bg</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorPrimaryDark">@color/toolbar_bg</item>
+    </style>
+
+    <style name="ToolbarStyleNight" parent="@style/Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/grey_900</item>
+        <item name="android:textColorPrimary">@color/grey_500</item>
+        <item name="titleTextAppearance">@style/ToolbarTextAppearance</item>
+        <item name="actionMenuTextAppearance">@style/actionMenuTextAppearance</item>
+        <item name="actionModeBackground">@color/grey_900</item>
+        <item name="actionMenuTextColor">@color/grey_500</item>
+        <item name="colorControlNormal">@color/grey_500</item>
+        <item name="colorPrimaryDark">@color/grey_900</item>
+    </style>
+
+    <style name="ToolbarTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="actionMenuTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@drawable/shape_transparent</item>-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,18 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/default_containter_bgcolor"
+    android:orientation="vertical"
+    >
+
+    <ListView
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:choiceMode="singleChoice"
+    android:divider="?attr/divide_line_color"
+    android:layout_marginLeft="@dimen/defalt_view_margin_size"
+    android:background="?attr/default_containter_bgcolor"
+    android:id="@+id/listview_navigationfragment"
+    tools:context="com.xguokr.activity.NavigationDrawerFragment" />
+
+</LinearLayout>

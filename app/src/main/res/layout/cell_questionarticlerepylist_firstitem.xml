@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/defalt_view_margin_size"
+    android:background="?attr/default_containter_bgcolor">
+
+<!--    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/defalt_view_margin_size"
+        android:id="@+id/webview_questionarticlereply_firstitem"
+       />-->
+
+    <com.xguokr.view.TTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/defalt_view_margin_size"
+        android:id="@+id/ttextview_questionarticlereply_firstitem"
+        android:textColor="?attr/default_obvious_textcolor"
+        />
+
+    <View
+        android:background="?attr/divide_line_color"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/defalt_listview_divider_margin_size"
+        android:layout_height="1px"/>
+
+</LinearLayout>

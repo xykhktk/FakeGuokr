@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="?attr/default_containter_bgcolor"
+    tools:context="com.xguokr.fragment.QuestionArticleAndReplyFragment">
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textColor="?attr/default_obvious_textcolor"
+         android:textSize="@dimen/abc_text_size_large_material"
+         android:layout_marginLeft="@dimen/defalt_view_margin_size"
+         android:layout_marginRight="@dimen/defalt_view_margin_size"
+         android:layout_marginTop="@dimen/defalt_view_margin_size"
+         android:layout_marginBottom="0dp"
+         android:id="@+id/textview_question_question_articleandReply_fragment"/>
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:id="@+id/textview_annotation_htm_question_articleandReply_fragment"/>-->
+
+   <!-- <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webview_annotation_html_question_articleandReply_fragment"
+        ></WebView>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/recyclerview_question_articleandReply_fragment"/>
+        >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        >
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColorHint="@color/half_black"
+            android:id="@+id/edittext_question_articleandreply_fragment"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_comment_grey600_48dp"
+            android:id="@+id/imageview_question_articleandreply_fragment"/>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/default_containter_bgcolor"
+    tools:context="com.xguokr.activity.GroupArticlesListActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_grouparticlelist_activity"
+        android:theme="?attr/toolbarTheme"
+        android:background="?attr/toolbar_bg"
+        />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="?attr/default_containter_bgcolor"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/framelayout_grouparticlelist_activity"/>
+
+</LinearLayout>

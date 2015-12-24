@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/default_containter_bgcolor"
+    android:orientation="vertical" >
+    
+
+    <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+            android:id="@+id/textview_nickname_userinfofragment"
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp"
+            />
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+        
+        <ImageView
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+            android:id="@+id/imageview_userinfo_fragment"
+            android:src="@drawable/default_pic_48dp"
+            />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+            android:id="@+id/textview_introduction_userinfofragment"
+            android:layout_marginLeft="16dp"
+            android:textColor="?attr/default_summery_textcolor"
+            />
+        
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:layout_width="160dp"
+   		android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="48dp"
+        >
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+   			android:text="创建时间："
+            android:textColor="?attr/default_obvious_textcolor"
+   			android:layout_alignParentLeft="true"
+            />
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+            android:id="@+id/textview_date_created_userinfofragment"
+             android:textColor="?attr/default_obvious_textcolor"
+            android:layout_alignParentRight="true"
+            />
+   
+   </RelativeLayout>
+        <RelativeLayout 
+        android:layout_width="160dp"
+   		android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp"
+        >
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+   			android:text="博文数量："
+             android:textColor="?attr/default_obvious_textcolor"
+   			android:layout_alignParentLeft="true"
+            />
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+            android:id="@+id/textview_blogs_count_userinfofragment"
+            android:layout_alignParentRight="true"
+            android:textColor="?attr/default_obvious_textcolor"
+            />
+    </RelativeLayout>
+        
+     
+	<RelativeLayout 
+        android:layout_width="160dp"
+   		android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp"
+        >
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+   			android:text="问        题："
+            android:textColor="?attr/default_obvious_textcolor"
+   			android:layout_alignParentLeft="true"
+            />
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+            android:id="@+id/textview_questions_count_userinfofragment"
+            android:textColor="?attr/default_obvious_textcolor"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+        
+    <RelativeLayout 
+        android:layout_width="160dp"
+   		android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp"
+        >
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+   			android:text="帖        子："
+            android:textColor="?attr/default_obvious_textcolor"
+   			android:layout_alignParentLeft="true"
+            />
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+            android:id="@+id/textview_posts_count_userinfofragment"
+            android:textColor="?attr/default_obvious_textcolor"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>    
+ 
+        
+        
+  <RelativeLayout 
+        android:layout_width="160dp"
+   		android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp"
+        >
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+   			android:text="回        答："
+            android:textColor="?attr/default_obvious_textcolor"
+   			android:layout_alignParentLeft="true"
+            />
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+            android:textColor="?attr/default_obvious_textcolor"
+            android:id="@+id/textview_answers_count_userinfofragment"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>    
+        
+ 
+    
+  	<RelativeLayout 
+        android:layout_width="160dp"
+   		android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp"
+        >
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+   			android:text="关        注："
+             android:textColor="?attr/default_obvious_textcolor"
+   			android:layout_alignParentLeft="true"
+            />
+        
+         <TextView 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+             android:textColor="?attr/default_obvious_textcolor"
+            android:id="@+id/textview_followings_count_userinfofragment"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>   
+         
+          
+        
+    
+</LinearLayout>

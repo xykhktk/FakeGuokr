@@ -1,0 +1,16 @@
+ <android.support.v4.widget.SwipeRefreshLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:clickable="true"
+     android:background="?attr/default_containter_bgcolor"
+     android:id="@+id/swiperefreshLayout_fragment_grouptaglist"
+     >
+
+     <android.support.v7.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:id="@+id/recyclerView_fragment_grouptaglist"
+         />
+
+ </android.support.v4.widget.SwipeRefreshLayout>
