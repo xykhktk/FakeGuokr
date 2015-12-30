@@ -166,38 +166,6 @@ public class MainActivityNavigation extends AppCompatActivity
         if (id == R.id.mainactivity_setting) {
             Intent i = new Intent(this,SettingActivity.class);
             startActivityForResult(i,0);
-            /*final String currentThemem = XGUtil.SPGetStringUtil(MainActivityNavigation.this,Const.SPKey_Theme);
-            String mode = null;
-            if(currentThemem.equals(Const.Theme_Day)){
-                mode = "夜间模式";
-            }else{
-                mode = "日间模式";
-            }
-
-            String about = "关于";
-            String[]  m = {mode,about};
-            new AlertDialog.Builder(this).setTitle("").setItems(m, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    switch (which){
-                        case 0:
-                            if(currentThemem.equals(Const.Theme_Day)){
-                                XGUtil.SPSaveUtil(MainActivityNavigation.this, Const.SPKey_Theme, Const.Theme_Night);
-                            }else{
-                                XGUtil.SPSaveUtil(MainActivityNavigation.this, Const.SPKey_Theme, Const.Theme_Day);
-                            }
-                            recreate();
-                            break;
-                        case 1:
-                            new AlertDialog.Builder(MainActivityNavigation.this).setTitle("关于").setMessage("一个习作，学习对象是果壳非官方客户端https://github.com/NashLegend/SourceWall.").create().show();
-                            break;
-                        default:
-                    }
-
-                }
-            }).create().show();
-
-*/
             return true;
         }
         return super.onOptionsItemSelected(item);
