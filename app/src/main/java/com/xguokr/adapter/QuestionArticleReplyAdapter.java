@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.xguokr.bean.ReplyItem;
+import com.xguokr.util.NetUtil;
 import com.xguokr.view.TTextView;
 import com.xguokr.xguokr.R;
 
@@ -23,6 +24,7 @@ public class QuestionArticleReplyAdapter extends RecyclerView.Adapter {
     private ArrayList<ReplyItem> data;
     private Context context;
     private onItemClick onItemClick;
+    private boolean downloadPic = false;
     private final int Type_first_item = 0x11;//系统默认viewType是0
 
     public QuestionArticleReplyAdapter(Context context, ArrayList<ReplyItem> data,
@@ -31,6 +33,7 @@ public class QuestionArticleReplyAdapter extends RecyclerView.Adapter {
         this.data = data;
         this.onItemClick = onItemClick;
         this.context = context;
+        downloadPic = NetUtil.isDownLoadImg(context);
     }
 
     public void setData(ArrayList<ReplyItem> data) {
@@ -80,7 +83,12 @@ public class QuestionArticleReplyAdapter extends RecyclerView.Adapter {
                 vh.getAuthorNickname().setText(data.get(position).getAuthor_Nickename());
                 //vh.getConent().setText(Html.fromHtml(data.get(position).getHtml()));
                 vh.getConent().loadHtml(data.get(position).getHtml());
-                Picasso.with(context).load(data.get(position).getAuthor_avatar()).into(vh.getAuthorvatar());
+
+                if (downloadPic){
+                    Picasso.with(context).load(data.get(position).getAuthor_avatar()).into(vh.getAuthorvatar());
+                }else{
+                    vh.getAuthorvatar().setImageResource(R.drawable.default_image);
+                }
             }
         }
     }

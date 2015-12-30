@@ -61,8 +61,8 @@ public class KexuerenListGet {
 	}
 	
 	private ArrayList<ArticlelistItem> getActicleListFromJson(String data){
-		ArrayList<ArticlelistItem> list = new ArrayList<ArticlelistItem>();
-		if(data.length() <= 0) return list;
+		ArrayList<ArticlelistItem> list = new ArrayList<>();
+		if(data != null && data.length() <= 0) return list;
 		try {
 			JSONObject all = new JSONObject(data);
 			//JSONArray mJSONArray = new JSONArray(j.getJSONArray("result").toString());

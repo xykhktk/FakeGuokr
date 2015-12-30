@@ -50,9 +50,13 @@ public class Const {
     public static final String SPKey_Token = "Token";
     public static final String SPKey_Ukey = "Ukey";
 	public static final String SPKey_Theme = "Theme";
+	public static final String SPKey_DownloadPicMode = "DownloadPicMode";
 
 	public static final String Theme_Day = "Day";
 	public static final String Theme_Night = "Night";
+	public static final String DownloadPicMode_OnlyWifi = "OnlyWifi";
+	public static final String DownloadPicMode_Always = "Always";
+
 	
     public static final int HttpResultCode_UnsupportedEncodingException = 0x10001;
     public static final int HttpResultCode_ClientProtocolException = 0x10002;

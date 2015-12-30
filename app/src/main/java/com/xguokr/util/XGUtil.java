@@ -3,6 +3,7 @@ package com.xguokr.util;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.util.Log;
 import android.widget.Toast;
@@ -31,5 +32,11 @@ public class XGUtil {
 		}
 		mEditor.putString(key, value);
 		mEditor.commit();
+	}
+
+	public static String SPGetStringUtil(Context context,String key){
+		//return XGuokrApplication.getApplication().getSharedPreferences(SharedPreferencesName, Context.MODE_PRIVATE).getString(key, "");
+		SharedPreferences s = context.getSharedPreferences(SharedPreferencesName, Context.MODE_PRIVATE);
+		return  s.getString(key, "");
 	}
 }

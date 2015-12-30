@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/default_containter_bgcolor"
+    tools:context="com.xguokr.activity.SettingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/toolbarTheme"
+        android:background="?attr/toolbar_bg"
+        android:id = "@+id/toolbar_settingactivity"
+        />
+
+        <RadioGroup
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="@dimen/defalt_view_margin_size"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/default_obvious_textcolor"
+                android:text="@string/setting_daytheme"
+                android:id = "@+id/rb_daytheme_settingactivity"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/default_obvious_textcolor"
+                android:text="@string/setting_nighttheme"
+                android:id = "@+id/rb_nighttheme_settingactivity"
+                />
+        </RadioGroup>
+
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_margin="@dimen/defalt_view_margin_size"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/default_obvious_textcolor"
+                    android:text="@string/setting_download_always"
+                    android:id = "@+id/rb_download_always_settingactivity"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/default_obvious_textcolor"
+                    android:text="@string/setting_download_in_wifi"
+                    android:id = "@+id/rb_download_in_wifi_settingactivity"
+                    />
+            </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_cancel"
+                android:textColor="?attr/default_obvious_textcolor"
+                android:id = "@+id/btn_cancel_settingactivity"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_ok"
+                android:textColor="?attr/default_obvious_textcolor"
+                android:id = "@+id/btn_ok_settingactivity"/>
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

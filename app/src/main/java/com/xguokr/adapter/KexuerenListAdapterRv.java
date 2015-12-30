@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.xguokr.bean.ArticlelistItem;
+import com.xguokr.util.NetUtil;
 import com.xguokr.xguokr.R;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class KexuerenListAdapterRv extends RecyclerView.Adapter {
     Context context;
     onKexuerenItemClickListener onItemClickListener;
     onLastItemListener onLastItemListener;
+    private boolean downloadPic = false;
 
     public void setData(ArrayList<ArticlelistItem> data) {
         this.data = data;
@@ -47,6 +49,7 @@ public class KexuerenListAdapterRv extends RecyclerView.Adapter {
         this.context = context;
         this.onItemClickListener = onItemClickListener;
         this.onLastItemListener = onLastItemListener;
+        downloadPic = NetUtil.isDownLoadImg(context);
     }
 
 
@@ -59,7 +62,12 @@ public class KexuerenListAdapterRv extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         rvViewHolde viewHolde = (rvViewHolde) holder;
         viewHolde.getTextView().setText(data.get(position).getTitle());
-        Picasso.with(context).load(data.get(position).getTitleImageUrl()).into(viewHolde.getImageView());
+
+        if (downloadPic){
+            Picasso.with(context).load(data.get(position).getTitleImageUrl()).into(viewHolde.getImageView());
+        }else{
+            viewHolde.getImageView().setImageResource(R.drawable.default_image);
+        }
         //XGUtil.LogUitl("posi" + position + "getItemCount" + getItemCount());
         if (position == (getItemCount() -1 )){
             if(onLastItemListener != null)

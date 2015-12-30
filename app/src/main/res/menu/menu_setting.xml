@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.xguokr.activity.SettingActivity">
+    <item android:id="@+id/about_settingactiviyt" android:title="@string/setting_about"
+        android:orderInCategory="100" app:showAsAction="always" />
+</menu>

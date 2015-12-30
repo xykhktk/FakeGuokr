@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.xguokr.bean.QuestionTag;
+import com.xguokr.util.NetUtil;
 import com.xguokr.xguokr.R;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class QuestionTagAdapterRv extends RecyclerView.Adapter {
     private Context context;
     private QuestionTagAdapterRv.onQuestionTagClick onQuestionTagClick;
     private onLastItemCAllback onLastItemCAllback;
+    private boolean downloadPic = false;
 
     public void setData(ArrayList<QuestionTag> data) {
         this.data = data;
@@ -50,6 +52,7 @@ public class QuestionTagAdapterRv extends RecyclerView.Adapter {
         this.context = context;
         this.onQuestionTagClick = onQuestionTagClick;
         this.onLastItemCAllback = onLastItemCAllback;
+        downloadPic = NetUtil.isDownLoadImg(context);
     }
 
     @Override
@@ -64,7 +67,12 @@ public class QuestionTagAdapterRv extends RecyclerView.Adapter {
         vh.getTagTitle().setText(data.get(position).getTagName());
         vh.getNumber().setText(data.get(position).getTagNum());
         vh.getDesc().setText(data.get(position).getTagDesc());
-        Picasso.with(context).load(data.get(position).getTagImgUrl()).into(vh.getImageView());
+        if (downloadPic){
+            Picasso.with(context).load(data.get(position).getTagImgUrl()).into(vh.getImageView());
+        }else{
+            vh.getImageView().setImageResource(R.drawable.default_image);
+        }
+
         if (getItemCount() - 1 == position){
             onLastItemCAllback.LastItemCAllback();
             //XGUtil.LogUitl(getClass().getName() + "LastItemCAllback");

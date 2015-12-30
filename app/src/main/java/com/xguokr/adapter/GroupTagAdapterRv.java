@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.xguokr.bean.GroupTag;
+import com.xguokr.util.NetUtil;
 import com.xguokr.xguokr.R;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class GroupTagAdapterRv extends RecyclerView.Adapter {
     private Context context;
     private GroupTagAdapterRv.onGroupTagClick onGroupTagClick;
     private onLastItemCAllback onLastItemCAllback;
+    private boolean downloadPic = false;
 
     public void setData(ArrayList<GroupTag> data) {
         //this.data.clear();
@@ -50,6 +52,7 @@ public class GroupTagAdapterRv extends RecyclerView.Adapter {
         this.context = context;
         this.onGroupTagClick = onGroupTagClick;
         this.onLastItemCAllback = onLastItemCAllback;
+        downloadPic = NetUtil.isDownLoadImg(context);
     }
 
     @Override
@@ -63,7 +66,13 @@ public class GroupTagAdapterRv extends RecyclerView.Adapter {
         vh.getGroupName().setText(data.get(position).getGroupName());
         vh.getIndex().setText(data.get(position).getRank_num_top());
         vh.getMembers().setText(data.get(position).getGroupMemberNum());
-        Picasso.with(context).load(data.get(position).getTagImageUrl()).into(vh.getImageView());
+
+
+        if (downloadPic){
+            Picasso.with(context).load(data.get(position).getTagImageUrl()).into(vh.getImageView());
+        }else{
+            vh.getImageView().setImageResource(R.drawable.default_image);
+        }
         if (getItemCount() - 1 == position){
             onLastItemCAllback.LastItemCAllback();
             //XGUtil.LogUitl(getClass().getName() + "LastItemCAllback");

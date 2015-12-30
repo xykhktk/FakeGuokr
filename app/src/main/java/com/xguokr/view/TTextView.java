@@ -28,6 +28,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import com.xguokr.util.DisplayUtil;
 import com.xguokr.util.ImageSizeCache;
+import com.xguokr.util.NetUtil;
 import com.xguokr.xguokr.R;
 
 import java.net.URLDecoder;
@@ -45,23 +46,27 @@ public class TTextView extends TextView {
     private HtmlLoaderTask htmlTask;
     String html = "";
     Context context;
+    private boolean downloadPic = false;
 
     public TTextView(Context context) {
         super(context);
         this.context = context;
         setMovementMethod(LocalLinkMovementMethod.getInstance());
+        downloadPic = NetUtil.isDownLoadImg(context);
     }
 
     public TTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
         setMovementMethod(LocalLinkMovementMethod.getInstance());
+        downloadPic = NetUtil.isDownLoadImg(context);
     }
 
     public TTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
         setMovementMethod(LocalLinkMovementMethod.getInstance());
+        downloadPic = NetUtil.isDownLoadImg(context);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -219,6 +224,12 @@ public class TTextView extends TextView {
             float stretch = DisplayUtil.getPixelDensity(context);
             maxWidth = getMaxImageWidth();
             Drawable drawable = null;
+
+            if(!downloadPic){
+                drawable = context.getResources().getDrawable(R.drawable.default_image);
+                return  drawable;
+            }
+
             try {
                 if (source.startsWith("http")) {
                     //Bitmap bitmap = Picasso.with(getContext()).load(source).resize((int) maxWidth, 0).setTargetSizeAsMax(true).get();

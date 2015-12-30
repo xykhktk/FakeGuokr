@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.xguokr.bean.ReplyItem;
+import com.xguokr.util.NetUtil;
 import com.xguokr.view.TTextView;
 import com.xguokr.xguokr.R;
 
@@ -23,6 +24,7 @@ public class KexuerenArticleReplyAdapter extends RecyclerView.Adapter {
     private ArrayList<ReplyItem> data;
     private Context context;
     private onItemClickListener onItemClickListener;
+    private boolean downloadPic = false;
 
     public void setData(ArrayList<ReplyItem> data) {
         this.data = data;
@@ -33,6 +35,7 @@ public class KexuerenArticleReplyAdapter extends RecyclerView.Adapter {
         this.data = data;
         this.context = context;
         this.onItemClickListener = onItemClickListener;
+        downloadPic = NetUtil.isDownLoadImg(context);
     }
 
     @Override
@@ -48,7 +51,11 @@ public class KexuerenArticleReplyAdapter extends RecyclerView.Adapter {
         vh.getFloor().setText((position + 1) + "楼");
         vh.getPubTime().setText(data.get(position).getDate_created());
         vh.getHtml().loadHtml(data.get(position).getHtml());
-        Picasso.with(context).load(data.get(position).getAuthor_avatar()).into(vh.getAuthorvatar());
+        if (downloadPic){
+            Picasso.with(context).load(data.get(position).getAuthor_avatar()).into(vh.getAuthorvatar());
+        }else{
+            vh.getAuthorvatar().setImageResource(R.drawable.default_image);
+        }
 
     }
 

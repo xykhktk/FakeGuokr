@@ -1,7 +1,5 @@
 package com.xguokr.activity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -41,6 +39,11 @@ public class MainActivityNavigation extends AppCompatActivity
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private Toolbar toolbar;
 
+    public final static int ResultCode_ResetTheme = 1;
+    public final static int ResultCode_NotResetTheme = 2;
+    public final static int ResultCode_cancel = 3;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +51,8 @@ public class MainActivityNavigation extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar_mainactivity);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("科学人");
+
+        setDefaultDownloadPicMode();
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -63,6 +68,13 @@ public class MainActivityNavigation extends AppCompatActivity
         curentFregment = kexuerenListFragment;
         getSupportFragmentManager().beginTransaction().replace(R.id.container,kexuerenListFragment).commit();
 
+    }
+
+    private void setDefaultDownloadPicMode(){
+        String currentMode = XGUtil.SPGetStringUtil(MainActivityNavigation.this,Const.SPKey_DownloadPicMode);
+        if (TextUtils.isEmpty(currentMode)){
+            XGUtil.SPSaveUtil(MainActivityNavigation.this,Const.SPKey_DownloadPicMode,Const.DownloadPicMode_OnlyWifi);
+        }
     }
 
     @Override
@@ -152,8 +164,9 @@ public class MainActivityNavigation extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.mainactivity_setting) {
-
-            final String currentThemem = XGUtil.SPGetStringUtil(MainActivityNavigation.this,Const.SPKey_Theme);
+            Intent i = new Intent(this,SettingActivity.class);
+            startActivityForResult(i,0);
+            /*final String currentThemem = XGUtil.SPGetStringUtil(MainActivityNavigation.this,Const.SPKey_Theme);
             String mode = null;
             if(currentThemem.equals(Const.Theme_Day)){
                 mode = "夜间模式";
@@ -184,12 +197,23 @@ public class MainActivityNavigation extends AppCompatActivity
                 }
             }).create().show();
 
-
+*/
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch(resultCode){
+            case ResultCode_ResetTheme:
+                recreate();
+                break;
+            default:
+        }
+        //super.onActivityResult(requestCode, resultCode, data);
+
+    }
 
     @Override
     public void onKexuerenListItemClick(String url) {
